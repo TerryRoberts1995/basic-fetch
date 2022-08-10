@@ -7,6 +7,7 @@ fetch("http://127.0.0.1:5000/food/get")
       const newItemElement = document.createElement("div");
       const newItemText = document.createTextNode(`${item.title}`);
       newItemElement.appendChild(newItemText);
+      newItemElement.classList.add("food-item", `${item.menu_type}`);
 
       element.appendChild(newItemElement);
     });
